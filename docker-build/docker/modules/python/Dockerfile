@@ -17,5 +17,4 @@ RUN mkdir -p ./fml_agent/data
 ENV PYTHONPATH=/data/projects/fate/python:/data/projects/fate/eggroll/python
 ENV EGGROLL_HOME=/data/projects/fate/eggroll
 
-#CMD sleep 5; source /data/projects/python/venv/bin/activate && python ./fate_flow/fate_flow_server.py
-CMD sleep 5; python ./fate_flow/fate_flow_server.py
+CMD sleep 5
