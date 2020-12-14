@@ -150,16 +150,6 @@ buildModule() {
   cp -r ${package_dir}/examples ${source_dir}/docker-build/docker/modules/python/examples
   cp -r ${package_dir}/fate.env ${source_dir}/docker-build/docker/modules/python/fate.env
 
-  # python-nn
-  [ -d ${source_dir}/docker-build/docker/modules/python-nn/python ] && rm -rf ${source_dir}/docker-build/docker/modules/python-nn/python
-  [ -d ${source_dir}/docker-build/docker/modules/python-nn/eggroll ] && rm -rf ${source_dir}/docker-build/docker/modules/python-nn/eggroll
-  [ -d ${source_dir}/docker-build/docker/modules/python-nn/examples ] && rm -rf ${source_dir}/docker-build/docker/modules/python-nn/examples
-  [ -d ${source_dir}/docker-build/docker/modules/python-nn/fate.env ] && rm -rf ${source_dir}/docker-build/docker/modules/python-nn/fate.env
-  cp -r ${package_dir}/python ${source_dir}/docker-build/docker/modules/python-nn/python
-  cp -r ${package_dir}/eggroll ${source_dir}/docker-build/docker/modules/python-nn/eggroll
-  cp -r ${package_dir}/examples ${source_dir}/docker-build/docker/modules/python-nn/examples
-  cp -r ${package_dir}/fate.env ${source_dir}/docker-build/docker/modules/python-nn/fate.env
-
   # handle fateboard
   [ -d ${source_dir}/docker-build/docker/modules/fateboard/fateboard ] && rm -rf ${source_dir}/docker-build/docker/modules/fateboard/fateboard
   cp -r ${package_dir}/fateboard ${source_dir}/docker-build/docker/modules/fateboard/fateboard
@@ -183,8 +173,6 @@ buildModule() {
   # clean up
   rm -rf ${source_dir}/docker-build/docker/modules/python/python
   rm -rf ${source_dir}/docker-build/docker/modules/python/eggroll
-  rm -rf ${source_dir}/docker-build/docker/modules/python-nn/python
-  rm -rf ${source_dir}/docker-build/docker/modules/python-nn/eggroll
   rm -rf ${source_dir}/docker-build/docker/modules/fateboard/fateboard
   rm -rf ${source_dir}/docker-build/docker/modules/eggroll/eggroll
   rm -rf ${source_dir}/docker-build/docker/modules/eggroll/python
