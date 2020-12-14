@@ -182,7 +182,7 @@ buildModule() {
 
 pushImage() {
   ## push image
-  for module in "python" "eggroll" "fateboard"
+  for module in "python" "eggroll" "fateboard" "python-nn"
   do
       echo "### START PUSH ${module} ###"
       docker push ${PREFIX}/${module}:${TAG}
